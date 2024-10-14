@@ -26,6 +26,10 @@
   background-position: left 15px;
 }
 
+input:focus::placeholder {
+  visibility: hidden;
+}
+
 .button {
   position: absolute;
   top: 50%;
