@@ -9,18 +9,16 @@
 		"preview": "vite preview",
 		"test": "jest src/__tests__/tests-app.test.tsx",
 		"predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+		"deploy": "gh-pages -d dist"
 	},
 	"dependencies": {
 		"gh-pages": "^6.2.0",
 		"identity-obj-proxy": "^3.0.0",
-		"jest-svg-transformer": "^1.0.0",
 		"normalize-scss": "^8.0.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-router-dom": "^6.15.0",
-		"test": "^3.3.0",
-		"vite-plugin-svgr": "^4.2.0"
+		"test": "^3.3.0"
 	},
 	"devDependencies": {
 		"@testing-library/jest-dom": "^4.2.4",

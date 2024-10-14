@@ -7,8 +7,7 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "types": ["jest", "node", "vite/client",
-"vite-plugin-svgr/client"],
+    "types": ["jest", "node", "vite/client"],
     "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
   "include": ["src"]
