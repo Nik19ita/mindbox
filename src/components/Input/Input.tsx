@@ -7,13 +7,22 @@ interface IInputProp {
 
 const Input: FC<IInputProp> = ({ addItem }) => {
   const [inputValue, setInputValue] = useState("");
-  const refInput = useRef<HTMLInputElement>(null)
+  const refInput = useRef<HTMLInputElement>(null);
 
   const onClick = () => {
-    refInput.current !== null && refInput.current.focus()
-    if(inputValue.trim() !== '') {
+    refInput.current !== null && refInput.current.focus();
+    if (inputValue.trim() !== "") {
       setInputValue("");
-      addItem(inputValue.trim())};
+      addItem(inputValue.trim());
+    }
+  };
+
+  const onKeyEnter = (event: { key: string }) => {
+    refInput.current !== null && refInput.current.focus();
+    if (inputValue.trim() !== "" && event.key === "Enter") {
+      setInputValue("");
+      addItem(inputValue.trim());
+    }
   };
 
   return (
@@ -23,12 +32,17 @@ const Input: FC<IInputProp> = ({ addItem }) => {
         type="text"
         placeholder="What's needs to be done?"
         value={inputValue}
+        onKeyDown={onKeyEnter}
         onChange={(e) => setInputValue(e.target.value)}
         ref={refInput}
-        data-testid='input'
+        data-testid="input"
       />
       {inputValue !== "" && (
-        <button className={styles.button} onClick={onClick}  data-testid='button-add'>
+        <button
+          className={styles.button}
+          onClick={onClick}
+          data-testid="button-add"
+        >
           Add
         </button>
       )}
