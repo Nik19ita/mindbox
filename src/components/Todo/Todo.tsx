@@ -46,7 +46,7 @@ const Todo = () => {
       <List list={getListForRender(activeNavButton, list)} toggleItem={toggleItem} />
 
       <div className={styles.bottom}>
-        <p>2 items left</p>
+        <p>{`${list.length} items left`}</p>
 
         <div className={styles.buttons}>
           <Button
