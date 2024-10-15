@@ -5,7 +5,7 @@ import { MemoryRouter } from "react-router-dom";
 import App from "../App";
 
 
-describe("Тест компонента UsersPage", () => {
+describe("Тесты приложения", () => {
   const renderComponent = () => {
     return render(
       <MemoryRouter>

@@ -12,16 +12,15 @@ const Input: FC<IInputProp> = ({ addItem }) => {
   const onClick = () => {
     refInput.current !== null && refInput.current.focus();
     if (inputValue.trim() !== "") {
-      setInputValue("");
       addItem(inputValue.trim());
+      setInputValue("");
     }
   };
 
   const onKeyEnter = (event: { key: string }) => {
-    refInput.current !== null && refInput.current.focus();
     if (inputValue.trim() !== "" && event.key === "Enter") {
-      setInputValue("");
       addItem(inputValue.trim());
+      setInputValue("");
     }
   };
 
