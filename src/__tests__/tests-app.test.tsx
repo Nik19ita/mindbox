@@ -38,7 +38,7 @@ describe("Тесты приложения", () => {
   });
 
   
-  it("тест, проверяющий, что что при нажатии кнопки Completed, отображаются не сделанные дела", () => {
+  it("тест, проверяющий, что что при нажатии кнопки Completed, отображаются несделанные дела", () => {
     const { getByTestId, getAllByTestId } = renderComponent();
     fireEvent.change(getByTestId('input'), { target: { value: "Сделать тест" } });
     fireEvent.click(getByTestId('button-add'))
