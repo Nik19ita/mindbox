@@ -38,14 +38,14 @@ describe("Тесты приложения", () => {
   });
 
   
-  it("тест, проверяющий, что что при нажатии кнопки Completed, отображаются несделанные дела", () => {
+  it("тест, проверяющий, что при нажатии кнопки Completed, отображаются несделанные дела", () => {
     const { getByTestId, getAllByTestId } = renderComponent();
     fireEvent.change(getByTestId('input'), { target: { value: "Сделать тест" } });
     fireEvent.click(getByTestId('button-add'))
     fireEvent.change(getByTestId('input'), { target: { value: "Сделать еше один тест" } });
     fireEvent.click(getByTestId('button-add'))
     fireEvent.click(getByTestId('button-active'))
-    expect(getAllByTestId('item-paragraf')[0]).not.toHaveClass('active')
-    expect(getAllByTestId('item-paragraf')[1]).not.toHaveClass('active')
+    expect(getAllByTestId('item-paragraf')[0]).not.toHaveClass('completed')
+    expect(getAllByTestId('item-paragraf')[1]).not.toHaveClass('completed')
   });
 });
