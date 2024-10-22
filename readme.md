@@ -1,4 +1,4 @@
-# Приложение ToDo List
+# Приложение To-Do List
 
 <hr />
 
