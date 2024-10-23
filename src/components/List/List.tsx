@@ -11,9 +11,9 @@ interface IListProps {
 const List: FC<IListProps> = ({ list, toggleItem }) => {
   return (
     <ul className={styles.list} data-testid='list'>
-      {list.map((el, index) => {
+      {list.map((el) => {
         return (
-          <li className={styles.item} key={`list-${index}`} >
+          <li className={styles.item} key={`list-${el.id}`} >
             <Item el={el} toggleItem={toggleItem} />
           </li>
         );

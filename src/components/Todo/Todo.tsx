@@ -15,7 +15,7 @@ const Todo = () => {
     setList((list) => [
       ...list,
       {
-        id: list.length,
+        id: Date.now(),
         text: inputValue,
         done: false,
       },
@@ -43,7 +43,10 @@ const Todo = () => {
   return (
     <div className={styles.todo}>
       <Input addItem={addItem} />
-      <List list={getListForRender(activeNavButton, list)} toggleItem={toggleItem} />
+      <List
+        list={getListForRender(activeNavButton, list)}
+        toggleItem={toggleItem}
+      />
 
       <div className={styles.bottom}>
         <p>{`${list.length} items left`}</p>
